@@ -1,5 +1,20 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  const  myArray= new Set();
+
+  for(let x=0; x< array.length; x++){
+    const value=target - array[x]
+    if (myArray.has(value)){
+      return true;
+      
+    }
+    else {
+      myArray.add(array[x])
+    }
+  }
+  return false
+
 }
 
 /* 
@@ -8,6 +23,11 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  creat a new variable called myArray and use the set method on it 
+  iterate through the array list and find any number when subtructed from the 
+  array store the value to a {value} variable .look if the myArray variable has that valueru 
+  it returns true else add the value to the myarray variable
+
 */
 
 /*
